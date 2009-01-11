@@ -114,7 +114,13 @@ namespace :morph do
         
         abort('*** ERROR: Export from repository failed! Please check the repository setting at the start of the file') if $?.to_i != 0
 
-        # Verify that we have the expected rails structure 
+        # Verify that we have the expected rails structure
+        ##################################
+        #PRUEBAS
+        #puts('Dalle!')
+        #sleep(15)
+        #puts('Vamos')
+        ##################################
 	    ['/app', '/public', '/config/environment.rb', '/lib'].each do |e| 
 	       abort "*** ERROR: Rails directories are missing. Please make sure your set :repository is correct!" if !File.exist?("#{morph_tmp_dir}#{e}")
 	    end

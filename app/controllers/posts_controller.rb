@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # GET /posts
   def index
-    @posts = Post.find(:all)
+    @posts = Post.ordered
   end
 
   # GET /posts/1

@@ -1,5 +1,6 @@
-<h2><%= link_to h(post.title), post %></h2>
-
+<h2><%= link_to h(post.title), post %></h2> 
+<em> <%= post.created_at.strftime("%x") %></em>
+<em> <%= post.created_at.strftime("%X") %></em>
 <p>
-	<%=h post.content %>
+	<%= auto_link simple_format post.content %>
 </p>

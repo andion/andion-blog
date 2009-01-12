@@ -1,0 +1,10 @@
+<% for comment in @post.comments %>
+	<strong><%=h comment.author %></strong>
+	<blockquote>
+		<%=h comment.content %>
+	</blockquote>
+<% end %>
+
+<br />
+
+<%= render :partial =>"new_comment" %>

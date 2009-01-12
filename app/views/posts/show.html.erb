@@ -1,12 +1,8 @@
-<p>
-  <b>Title:</b>
-  <%=h @post.title %>
-</p>
 
-<p>
-  <b>Content:</b>
-  <%=h @post.content %>
-</p>
+<%= render :partial => "post", :object => @post  %>
+
+<h2>Comments:</h2>
+<%= render :partial => "comments" %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -1,0 +1,11 @@
+=Andion's Blog
+
+Just a personal blog to learn rails
+
+Features so far:
+
+* 12/1/2009 - Basic scaffold of Posts
+* 12/1/2009 - Added comment support
+* 14/1/2009 - Added RSS support for posts
+
+Author: Lucas Andión (andion AT gmail.com)

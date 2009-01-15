@@ -1,7 +1,7 @@
 body { background-color: #fff; color: #333; }
 
 body, p, ol, ul, td {
-  font-family: 'avant garde','century gothic',georgia,sans-serif;
+  font-family: 'avant garde',georgia,serif;
   font-size:   13px;
   line-height: 18px;
 }

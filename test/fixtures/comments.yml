@@ -13,10 +13,14 @@
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  author: MyString
-  content: MyText
+one_post_one:
+  author: Lucas Andion
+  content: Primer comentario sobre el primer post
 
-two:
-  author: MyString
-  content: MyText
+two_post_one:
+  author: Lucas Andion
+  content: Segundo comentario sobre el primer post
+
+one_post_two:  
+  author: Lucas Andion
+  content: Segundo comentario sobre el primer post

@@ -1,5 +1,7 @@
 require 'test_helper'
 
+#Este es un comentario
+
 class PostsControllerTest < ActionController::TestCase
   def test_should_get_index
     get :index
@@ -13,33 +15,16 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   def test_should_create_post
-    assert_difference('Post.count') do
-      post :create, :post => { }
+    assert_difference('Post.count')
+      post :create, :post => @one 
     end
 
     assert_redirected_to post_path(assigns(:post))
   end
 
   def test_should_show_post
-    get :show, :id => posts(:one).id
+    get :show, :id => @one.id
     assert_response :success
   end
 
-  def test_should_get_edit
-    get :edit, :id => posts(:one).id
-    assert_response :success
-  end
-
-  def test_should_update_post
-    put :update, :id => posts(:one).id, :post => { }
-    assert_redirected_to post_path(assigns(:post))
-  end
-
-  def test_should_destroy_post
-    assert_difference('Post.count', -1) do
-      delete :destroy, :id => posts(:one).id
-    end
-
-    assert_redirected_to posts_path
-  end
 end

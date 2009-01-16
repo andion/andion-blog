@@ -10,12 +10,16 @@
 #  updated_at :datetime
 #
 
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+post:
+  title: Titulo del post
+  content: Este es un post generico a fecha de hoy
 
-one:
-  title: MyString
-  content: MyText
-
-two:
-  title: MyString
-  content: MyText
+yesterday_post:
+  title: Primer Post
+  content: Este es el primer post
+  created_at: <%= 1.day.since(Time.current).to_s(:db) %>
+  
+today_post:
+  title: Segundo Post
+  content: Este es mi segundo post
+  created_at: <%= 5.minutes.since(Time.current).to_s(:db) %>

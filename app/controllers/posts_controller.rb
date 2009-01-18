@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
   end
 
   # GET /posts/new
@@ -19,10 +20,23 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
       if @post.save
         flash[:notice] = 'Post was successfully created.'
-        redirect_to(@post)        
+        redirect_to(@post)       
       else
         render :action => "new"
       end
-  end    
+  end
+  
+  def add_comment
+    @post = Post.find(params[:id])
+    @comment = Comment.new(params[:comment])
+    @comment.post_id = @post.id
+    if @comment.save
+      flash[:notice] = 'Comment was successfully created.'
+      redirect_to(@post)
+    else
+      #TODO: do this redirect to the same page & show errors
+      render :action => 'show'
+    end
+  end
   
 end

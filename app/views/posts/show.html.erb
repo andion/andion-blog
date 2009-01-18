@@ -1,5 +1,7 @@
 
-<%= render :partial => "post", :object => @post  %>
+<%= error_messages_for 'comments', :object => @post.comments %>
+
+<%= render :partial => "post"%>
 
 <h2>Comments:</h2>
 <%= render :partial => "comments" %>

@@ -2,10 +2,12 @@
 
 Just a personal blog to learn rails
 
-Features so far:
-
+==Features so far:
 * 12/1/2009 - Basic scaffold of Posts
 * 12/1/2009 - Added comment support
 * 14/1/2009 - Added RSS support for posts
+
+==Plugins used
+* Yfactorial utility scopes (gem): http://github.com/yfactorial/utility_scopes/tree/master
 
 Author: Lucas Andión (andion AT gmail.com)

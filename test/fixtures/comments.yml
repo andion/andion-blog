@@ -11,16 +11,21 @@
 #  updated_at :datetime
 #
 
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one_post_one:
+# +comment+ whould be a valid comment with all his data filled
+comment:
   author: Lucas Andion
-  content: Primer comentario sobre el primer post
-
-two_post_one:
+  content: Comentario generico
+  
+blaming_comment:
+  author: moron
+  content: fuck you!
+    
+comment_today:
   author: Lucas Andion
-  content: Segundo comentario sobre el primer post
+  content: Comentario hoy
+  created_at: <%= 5.minutes.since(Time.current) %>
 
-one_post_two:  
+comment_yesterday:  
   author: Lucas Andion
-  content: Segundo comentario sobre el primer post
+  content: Comentario realizado ayer
+  created_at: <%= 1.day.since(Time.current) %>  

@@ -10,9 +10,14 @@
 #  updated_at :datetime
 #
 
+
+# +post+ whould be a valid post with all his data filled
 post:
   title: Titulo del post
   content: Este es un post generico a fecha de hoy
+  
+contentless_post:
+  title: Post sin contenido
 
 yesterday_post:
   title: Primer Post

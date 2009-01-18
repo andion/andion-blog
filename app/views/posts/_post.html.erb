@@ -4,7 +4,8 @@
 		<em><%= post.created_at.strftime("%d/%m/%y") %></em>
 		<em> <%= post.created_at.strftime("%H:%M") %></em>
 	</span>
-	<div class="content">
-		<%= simple_format auto_link post.content %>
-	<div/>
+	<span class = "content">
+		<%= auto_link simple_format post.content %>
+	</span>
+	<%=  link_to number_of_comments(post), post_path(post, :anchor => "comments") %>	
 </div>

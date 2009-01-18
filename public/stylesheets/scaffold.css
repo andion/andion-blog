@@ -1,5 +1,5 @@
 body { 
-  background-color: #fff; 
+  background-color: #FEFEFE; 
   color: #333; 
 }
 
@@ -13,12 +13,18 @@ body {
 	margin-bottom:50px;
 }
 
+.back_header{
+	text-align:left;
+	float:left;
+	margin-left:15px;
+	margin-top:40px;
+}
 
 
 body, p, ol, ul, td {
 	font-family: 'avant garde','century gothic',georgia,sans-serif;
-	font-size:   13px;
-	line-height: 18px;
+	font-size:   18px;
+	line-height: 1.5em;
 }
 
 pre {
@@ -70,17 +76,15 @@ a:hover { color: #fff; background-color:#000; }
 /* POSTS */
 
 .post{
-  font-size:1.2em;
   margin-bottom:100px;
 }
 
 .post a.title {
-	font-size:1.9em;
+	font-size:1.8em;
 	border-bottom:1px dotted silver;
 	display:block;
 	text-decoration:none;
   padding-left:10px;
-  padding-bottom:0.1em;
 }
 
 .post a.title:hover {
@@ -89,8 +93,19 @@ a:hover { color: #fff; background-color:#000; }
 	color:#333;
 }
 
-span.content {
+.post span.content {
+	margin-top:10px;
+}
+
+.post span.content p {	
 	margin-left:20px;
+}
+
+.post span.content a {
+	background-image:url("/images/link.gif");
+	background-repeat:no-repeat;
+	background-position:right center;
+	padding-right:0.5em;
 }
 
 .date {

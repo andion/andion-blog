@@ -1,6 +1,10 @@
-<h2><%= link_to h(post.title), post %></h2> 
-	<em> <%= post.created_at.strftime("%d/%m/%y") %></em>
-<em> <%= post.created_at.strftime("%X") %></em>
-<p>
-	<%= auto_link simple_format post.content %>
-</p>
+<div class="post">
+	<%= link_to h(post.title), post, :class=>"title" %>
+	<span class = "date"> 
+		<em><%= post.created_at.strftime("%d/%m/%y") %></em>
+		<em> <%= post.created_at.strftime("%H:%M") %></em>
+	</span>
+	<div class="content">
+		<%= simple_format auto_link post.content %>
+	<div/>
+</div>

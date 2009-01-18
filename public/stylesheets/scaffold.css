@@ -1,15 +1,30 @@
-body { background-color: #fff; color: #333; }
+body { 
+  background-color: #fff; 
+  color: #333; 
+}
+
+.blog_title {
+	background:#333 url("/images/header.png");
+	text-align:right;
+	height:80px;
+	margin-top:-8px;
+	margin-left:-8px;
+	margin-right:-8px;
+	margin-bottom:50px;
+}
+
+
 
 body, p, ol, ul, td {
-  font-family: 'avant garde','century gothic',georgia,sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+	font-family: 'avant garde','century gothic',georgia,sans-serif;
+	font-size:   13px;
+	line-height: 18px;
 }
 
 pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+	background-color: #eee;
+	padding: 10px;
+	font-size: 11px;
 }
 
 a { color: #000; }
@@ -52,6 +67,38 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
-.time {
+/* POSTS */
 
+.post{
+  font-size:1.2em;
+  margin-bottom:100px;
+}
+
+.post a.title {
+	font-size:1.9em;
+	border-bottom:1px dotted silver;
+	display:block;
+	text-decoration:none;
+  padding-left:10px;
+  padding-bottom:0.1em;
+}
+
+.post a.title:hover {
+	border-bottom:1px solid silver;
+	background-color: #fff;
+	color:#333;
+}
+
+span.content {
+	margin-left:20px;
+}
+
+.date {
+	font-family: georgia, sans-serif;
+	float:right;
+        color:silver;
+}
+
+br.post_separation {
+	margin-bottom:20px;
 }

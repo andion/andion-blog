@@ -1,9 +1,10 @@
+<div id="add_comment">
 <% form_for :comment, @comment, :url => add_comment_post_path(@post) do |f| %>
   
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :author %><br />
+    <%= f.label :author %> <span class="hint">(Optional)</span><br />
     <%= f.text_field :author %>
   </p>
   <p>
@@ -14,3 +15,4 @@
     <%= f.submit "Create" %>
   </p>
 <% end %>
+</div>

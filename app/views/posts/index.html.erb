@@ -1,13 +1,9 @@
-<h1>Andion's blog</h1>
-
 
 <% for post in @posts %>
 
 	<%= render :partial => "post", :object => post  %>
-	<%=  link_to number_of_comments(post), post_path(post) %>
+	<%=  link_to number_of_comments(post), post_path(post, :anchor => "comments") %>
 
 <% end %>
-
-<br />
 
 <%= link_to 'New post', new_post_path %>

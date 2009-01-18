@@ -1,10 +1,9 @@
 
-<%= error_messages_for 'comments', :object => @post.comments %>
+<%= link_to '&laquo; Back to blog index', posts_path %>
 
 <%= render :partial => "post"%>
 
 <h2>Comments:</h2>
 <%= render :partial => "comments" %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post) %>

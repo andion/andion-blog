@@ -79,26 +79,59 @@ a:hover { color: #fff; background-color:#000; }
   margin-bottom:100px;
 }
 
+.post_sidebar{
+  width:15%;
+  float:left;
+  margin-left:10px;
+  padding-right:10px;
+border-right:2px solid silver;
+	text-align:center;
+}
+
+
+.post_sidebar .time {
+  font-family: georgia, sans-serif;
+	color:gray;
+	font-size:1.5em;
+padding-top:0.3em;
+}
+
+.post_sidebar a.comments {
+  font-size:0.8em;
+}
+
+.post_content{
+  width:80%;
+float:right;
+}
+
+.post_sidebar .day{
+    font-size:1.5em;
+    color:gray;
+}
+
+.post_sidebar .year{
+    font-size: 0.7em;
+    color:silver;
+}
+
 .post a.title {
 	font-size:1.8em;
-	border-bottom:1px dotted silver;
+	line-height: 1.2em;
 	display:block;
 	text-decoration:none;
-  padding-left:10px;
 }
 
 .post a.title:hover {
-	border-bottom:1px solid silver;
 	background-color: #fff;
 	color:#333;
 }
 
-.post span.content {
-	margin-top:10px;
+.post span.content  {
 }
 
 .post span.content p {	
-	margin-left:20px;
+	margin-left:1em;
 }
 
 .post span.content a {
@@ -111,7 +144,7 @@ a:hover { color: #fff; background-color:#000; }
 .date {
 	font-family: georgia, sans-serif;
 	float:right;
-        color:silver;
+  color:silver;
 }
 
 br.post_separation {

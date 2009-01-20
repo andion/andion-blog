@@ -41,7 +41,7 @@ class Comment < ActiveRecord::Base
   # Returns a regular expression of words you don't allow in posts
   #
   def self.blame_words_regexp
-    Regexp.new('fuck|ass|shit|silly|moron')
+    Regexp.new('fuck|ass|shit|silly|moron|puta|cabrón|gilipollas|mamón|imbécil')
   end
   
   #

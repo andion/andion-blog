@@ -29,15 +29,12 @@ class PostTest < ActiveSupport::TestCase
   
   #
   # Test if we can add a comment to a post
-  # TODO: make this work!!
-  # 
-  # def test_add_comment_to_post
-  #   nc = @post.number_of_comments
-  #   @post.add_comment @comment
-  #   puts ">>>>>#{@post.comments.inspect}"
-  #   puts ">>>>>#{@comment.inspect}"    
-  #   assert_equal(nc + 1, @post.number_of_comments)
-  # end
+  #
+   def test_add_comment_to_post
+     nc = @post.number_of_comments
+     @post.comments << @comment
+     assert_equal(nc + 1, @post.number_of_comments)
+   end
   
   #
   # Test if the order is correct (from newest to oldest)

@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
   # Adds a comment to a post
   #
   def add_comment(comment)
-    comment.post_id = self.id
+    self.comments << comment
   end
   
   #

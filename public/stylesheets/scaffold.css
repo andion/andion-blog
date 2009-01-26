@@ -96,10 +96,6 @@ border-right:2px solid silver;
 padding-top:0.3em;
 }
 
-.post_sidebar a.comments {
-  font-size:0.8em;
-}
-
 .post_content{
   width:80%;
 float:right;
@@ -121,6 +117,7 @@ float:right;
 	display:block;
 	text-decoration:none;
 }
+
 
 .post a.title:hover {
 	background-color: #fff;
@@ -147,6 +144,43 @@ float:right;
   color:silver;
 }
 
+.post .comments {
+font-weight:bolder;
+text-decoration:none;
+font-style:italic;
+float:right;
+margin-right:2em;
+}
+
 br.post_separation {
 	margin-bottom:20px;
 }
+
+/* Comments */
+/* TODO: style comment view */
+
+#comments_header {
+	text-align:right;
+	height:2.6em;
+	background:#333 url("/images/header_comments.png");
+	border-top:1px solid black;	
+	display:block;
+	margin-top:-2em;
+	margin-left:-8px;
+	margin-right:-8px;
+}
+
+.hint {font-size:0.7em;font-style:italic;color:#666;}
+
+#comments_block h2 {color:silver;}
+
+#comments_block{
+	margin-left:-8px;
+	margin-right:-8px;
+	background-color:#f0f0f0;
+	padding:0.5em 0px 0.5em 21%;
+	border-top:1px solid black;
+	font-size:0.8em;
+}
+
+#comments_block input, textarea {font-size:0.8em;font-family:century gothic;}

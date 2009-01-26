@@ -1,7 +1,9 @@
 
 <%= render :partial => "post"%>
 
-<h2>Comments:</h2>
-<%= render :partial => "comments" %>
-
-<%= link_to 'Edit', edit_post_path(@post) %>
+<div id="comments_header">
+	<%= image_tag "has_many_comments.png" %>
+</div>
+<div id="comments_block">
+	<%= render :partial => "comments" %>
+</div>

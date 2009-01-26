@@ -2,16 +2,18 @@
 <% if @post.comments.length > 0 %>
 	
 	<% for comment in @post.comments %>
+	<div class="comment">
 		<strong><%=h comment.author_name %></strong>
 		<blockquote>
 			<%=h comment.content %>
 		</blockquote>
+	</div>
 	<% end %>
 
-	<br />
 <% else %>
 	<p> There are no comments </p>
 <% end %>
+
 </div>
 
 <%= render :partial =>"add_comment" %>

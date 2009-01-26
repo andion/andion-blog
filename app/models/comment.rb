@@ -32,7 +32,7 @@ class Comment < ActiveRecord::Base
   # Returns the author name or anonymous
   #
   def author_name
-    self.author ? "- #{self.author}" : 'Anonymous'
+    self.author ? "#{self.author}" : 'Anonymous'
   end
   
   protected

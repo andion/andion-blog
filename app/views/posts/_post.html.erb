@@ -6,7 +6,6 @@
 	<em class="month"><%= post.created_at.strftime("%b") %></em><br/>
 	<em class="year"><%= post.created_at.strftime("%Y") %></em><br/>
 	</div>
-    <%=  link_to number_of_comments(post), post_path(post, :anchor => "comments"), :class=>"comments" %>		
 </div>
 <div class="post_content">
 	<%= link_to h(post.title), post, :class=>"title" %>
@@ -14,6 +13,9 @@
 	<span class = "content">
 		<%= auto_link simple_format post.content %>
 	</span>
+
+	<%=  link_to number_of_comments(post), 
+				 post_path(post, :anchor => "comments_block"), :class=>"comments" %>
 	
 </div>
 <br style="clear:both;" />

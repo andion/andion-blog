@@ -1,0 +1,45 @@
+# == Schema Information
+# Schema version: 20090128224427
+#
+# Table name: users
+#
+#  id                :integer         not null, primary key
+#  login             :string(255)
+#  crypted_password  :string(255)
+#  password_salt     :string(255)
+#  persistence_token :string(255)
+#  login_count       :integer
+#  last_request_at   :datetime
+#  last_login_at     :datetime
+#  current_login_at  :datetime
+#  last_login_ip     :string(255)
+#  current_login_ip  :string(255)
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  login: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  login_count: 1
+  last_request_at: 2009-01-28 23:44:27
+  last_login_at: 2009-01-28 23:44:27
+  current_login_at: 2009-01-28 23:44:27
+  last_login_ip: MyString
+  current_login_ip: MyString
+
+two:
+  login: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  login_count: 1
+  last_request_at: 2009-01-28 23:44:27
+  last_login_at: 2009-01-28 23:44:27
+  current_login_at: 2009-01-28 23:44:27
+  last_login_ip: MyString
+  current_login_ip: MyString

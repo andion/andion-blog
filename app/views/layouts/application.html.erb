@@ -10,16 +10,24 @@
 	      :title => "Latest Andion's blog posts" ) %>
 	</head>
 	<body>
+
 	
-	<div class="blog_title">
+	<div class="blog_title">	
 		<%= back_to_index_link %>
 		<%= image_tag "titulo_blog2.png" %>
 	</div>
 	
 	<p style="color: green"><%= flash[:notice] %></p>
 
-	<%= yield  %>
+		<%= yield  %>
 
 	<%= back_to_index_link %>
+	
+	<% if current_user %>
+	  <%= link_to "Logout", user_session_path, :method => :delete %>
+	<% else %>
+  	  <%= log_in_link %>	
+	<% end %>
+		
 	</body>
 	</html>

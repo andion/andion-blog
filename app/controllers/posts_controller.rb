@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  before_filter :require_user, :only => [:new]  
+  
   # GET /posts
   def index
     @posts = Post.ordered

@@ -21,5 +21,8 @@ Rails::Initializer.run do |config|
     :version => '0.2.2',
     :lib => 'utility_scopes',
     :source => 'http://gems.github.com'
+    
+  config.gem "authlogic",
+    :version => '1.3.9'
 
 end

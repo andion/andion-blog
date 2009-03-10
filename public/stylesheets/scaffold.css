@@ -3,6 +3,12 @@ body {
   color: #333; 
 }
 
+.copyright {
+	float:right;
+	font-size:0.8em;
+	color:#666;
+}
+
 div.login {
 	border:1px solid #666;
 	background-color:#eee;

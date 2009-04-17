@@ -25,4 +25,12 @@ Rails::Initializer.run do |config|
   config.gem "authlogic",
     :version => '1.3.9'
 
+  config.gem "mislav-will_paginate",
+    :version => '2.3.6',
+    :lib => 'will_paginate',
+    :source => 'http://gems.github.com'
+
+  config.gem 'paperclip', 
+    :version => '2.1.2'
+
 end

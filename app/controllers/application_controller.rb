@@ -16,7 +16,21 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
 
+  # New in rails 2.2: http://m.onkey.org/2008/7/20/rescue-from-dispatching
+  rescue_from ActionController::RoutingError, :with => :route_not_found
+  rescue_from ActionController::MethodNotAllowed, :with => :invalid_method
+
   private
+
+    def route_not_found
+      render :text => 'What are you looking for ?', :status => :not_found
+    end
+
+    def invalid_method
+      message = "Andale! no mas que me da una rabia que intente #{request.request_method.to_s.upcase} eso!"
+      render :text => message, :status => :method_not_allowed
+    end
+
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find

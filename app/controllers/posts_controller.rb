@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   
   # GET /posts
   def index
-    @posts = Post.ordered
+    @posts = Post.ordered.paginate :page => params[:page]
   end
 
   # GET /posts/1

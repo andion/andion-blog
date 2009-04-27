@@ -16,7 +16,22 @@ module ApplicationHelper
   def log_in_link
     if current_page?(:controller => 'posts', :action => 'index') or current_page?('/') and !current_user
 	    link_to 'Log in', new_user_session_path, :class=>"login"
-	  end
-    
+	  end    
   end
+  
+  #
+  # Renders the flash messages stored in the :notice and :error keys. This 
+  # messages are wrapped by a container marked as "flash notice" and  
+  # "flash error" respectively
+  #
+  def render_flash
+    markup = []
+    for key in [:notice, :error]        
+      if flash[key]
+        markup << content_tag(:div, h(flash[key]), :class => "flash #{key}")          
+      end
+    end      
+    markup.join
+  end
+  
 end

@@ -2,6 +2,7 @@
 	<% for post in @posts %>
 		<%= render :partial => "post", :object => post  %>
 	<% end %>
+	<%= will_paginate @posts %>
 	<% if current_user %>
 	  <%= link_to "New Post", new_post_path %>
 	<% end %>	

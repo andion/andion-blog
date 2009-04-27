@@ -15,6 +15,13 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
   
   #
+  # Default will_paginate's per page
+  #
+  def self.per_page
+    10
+  end
+  
+  #
   # Adds a comment to a post
   #
   def add_comment(comment)

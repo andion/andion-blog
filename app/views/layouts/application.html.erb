@@ -17,9 +17,9 @@
 		<%= image_tag "titulo_blog2.png" %>
 	</div>
 	
-	<p style="color: green"><%= flash[:notice] %></p>
+	<%= render_flash %>
 
-		<%= yield  %>
+	<%= yield  %>
 
 	<%= back_to_index_link %>
 	

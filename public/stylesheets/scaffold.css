@@ -254,3 +254,15 @@ br.post_separation {
 div.presentation {
 	font-family: 'avant garde','century gothic',georgia,sans-serif;
 }
+
+div.presentation a {
+  text-decoration:none;
+}
+
+div.presentation a:hover {
+  background-color:transparent;
+  color:#330;
+}
+
+
+

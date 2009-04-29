@@ -255,18 +255,25 @@ body.presentation {
     background-color:#fefefe;
 }
 
+body.presentation h1 , body.presentation h2 {font-family: Avant Garde; font-weight: normal}
+
+
+body.presentation a {
+    text-decoration:none;
+    color:#666;
+}
+
+body.presentation a.linkedin {
+    color:#56b;
+}
+
+body.presentation a:hover {
+    background-color:transparent;
+    color:#0397D5;
+}
+
 div.presentation {
-  font-family: 'avant garde','century gothic',georgia,sans-serif;
-  margin: 10% 19%;
-}
-
-div.presentation a {
-  text-decoration:none;
-}
-
-div.presentation a:hover {
-  background-color:transparent;
-  color:#330;
+  margin: 10% 20%;
 }
 
 

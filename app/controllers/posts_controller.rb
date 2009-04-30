@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_filter :require_user, :only => [:new]  
+  before_filter :require_user, :only => [:new,:edit]
   
   # GET /posts
   def index
@@ -27,6 +27,23 @@ class PostsController < ApplicationController
       else
         render :action => "new"
       end
+  end
+
+  # GET /posts/:id/edit
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  # PUT /posts/:id
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(params[:post])
+      flash[:notice] = 'El post ha sido actualizado correctamente'
+      redirect_to @post
+    else
+      flash[:error] = 'No se puede actualizar el postest'
+      render :action => 'edit'
+    end
   end
   
   def add_comment

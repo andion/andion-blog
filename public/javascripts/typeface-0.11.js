@@ -250,14 +250,14 @@ var _typeface_js = {
 
 	applyElementVerticalMetrics: function(face, style, e) {
 
-		var boundingBoxAdjustmentTop = this.pixelsFromPoints(face, style, face.ascender - Math.max(face.boundingBox.yMax, face.ascender)); 
-		var boundingBoxAdjustmentBottom = this.pixelsFromPoints(face, style, Math.min(face.boundingBox.yMin, face.descender) - face.descender); 
-				
+		var boundingBoxAdjustmentTop = this.pixelsFromPoints(face, style, face.ascender - Math.max(face.boundingBox.yMax, face.ascender));
+		var boundingBoxAdjustmentBottom = this.pixelsFromPoints(face, style, Math.min(face.boundingBox.yMin, face.descender) - face.descender);
+
 		var cssLineHeightAdjustment = 0;
 		if (style.lineHeight != 'normal') {
 			cssLineHeightAdjustment = style.lineHeight - this.pixelsFromPoints(face, style, face.lineHeight);
 		}
-		
+
 		var marginTop = Math.round(boundingBoxAdjustmentTop + cssLineHeightAdjustment / 2);
 		var marginBottom = Math.round(boundingBoxAdjustmentBottom + cssLineHeightAdjustment / 2);
 

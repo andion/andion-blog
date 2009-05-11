@@ -14,8 +14,8 @@ module ApplicationHelper
   # Returns a log in link if the user is logged out & in the main page
   #
   def log_in_link
-    if current_page?(:controller => 'posts', :action => 'index') 
-        or current_page?('/blog') and !current_user
+    if current_page?(:controller => 'posts', :action => 'index') or
+        current_page?('/blog') and !current_user
 	    link_to 'Log in', new_user_session_path, :class=>"login"
 	  end    
   end

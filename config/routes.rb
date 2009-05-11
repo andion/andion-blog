@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Kept only to have 'root page detection'
   map.root :controller => "posts"
-  map.connect 'blog', :controller => "posts"
+  map.blog '/blog', :controller => "posts"
   
   # Authlogic Session
   map.resource :user_session

@@ -255,7 +255,7 @@ body.presentation {
     background-color:#fefefe;
 }
 
-body.presentation h1 , body.presentation h2 {font-family: R Gerstner;}
+body.presentation h1 , body.presentation h2 {font-family: avant garde;}
 
 
 body.presentation a {
@@ -276,5 +276,8 @@ div.presentation {
   margin: 10% 20%;
 }
 
+div.gist {
+  max-width:80%;
+}
 
 

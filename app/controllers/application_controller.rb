@@ -20,10 +20,10 @@ class ApplicationController < ActionController::Base
   rescue_from ActionController::RoutingError, :with => :route_not_found
   rescue_from ActionController::MethodNotAllowed, :with => :invalid_method
 
-  private
+  private        
 
     def route_not_found
-      render :text => 'What are you looking for ?', :status => :not_found
+      render :text => "Sorry Dave... I'm afraid I can't do that", :status => :not_found
     end
 
     def invalid_method

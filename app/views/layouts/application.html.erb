@@ -19,9 +19,7 @@
 	            |	            
 	        <% end %>
 	        <%= log_in_or_log_out_link %>
-	        |
-	        <%= link_to 'source on github',
-	            'http://github.com/andion/andion-blog/tree/master' %>
+	        
 	    </span>
 		
 		<%= image_tag "titulo_blog2.png" %>
@@ -35,6 +33,11 @@
 	<%= back_to_index_link %>
 	
     <%= log_in_or_log_out_link %>
-	<p class="copyright"> <span style="font-size:1.5em;color:#333">&fnof;</span> Lucas Andión <%= Time.current.year %> </p>
+	<p class="copyright"> 
+	    <span style="font-size:1.5em;color:#333">&fnof;</span> 
+	    Lucas Andión <%= Time.current.year %> 	        
+	    (<%= link_to 'source on github',
+	            'http://github.com/andion/andion-blog/tree/master' %>)
+	</p>
 	</body>
 	</html>

@@ -14,8 +14,15 @@
 		<%= auto_link simple_format post.content %>
 	</span>
 
+    <span class = "post_actions">
 	<%=  link_to number_of_comments(post), 
-				 post_path(post, :anchor => "comments_block"), :class=>"comments" %>
+				 post_path(post, :anchor => "comments_block") %>
+
+    <% if current_user %>
+      |
+      <%= link_to "Edit", edit_post_path(post) %>
+    <% end %>
+    </span>
 	
 </div>
 <br style="clear:both;" />

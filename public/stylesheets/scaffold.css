@@ -21,6 +21,19 @@ div.login {
 	margin-bottom:3em;
 }
 
+#header .links {
+    float:left;
+    margin-left:10px;
+    margin-top:5px;
+    color:#fefefe;
+}
+
+#header .links a {
+    color:#fefefe;
+    text-decoration:none;
+    padding: 0px 2px 0px 5px
+}
+
 .blog_title {
 	background:#333 url("/images/header.png");
 	text-align:right;
@@ -176,12 +189,15 @@ float:right;
   color:silver;
 }
 
-.post .comments {
+.post .post_actions {
 font-weight:bolder;
 text-decoration:none;
-font-style:italic;
 float:right;
 margin-right:2em;
+}
+
+.post .post_actions a {
+    font-style:italic;
 }
 
 br.post_separation {

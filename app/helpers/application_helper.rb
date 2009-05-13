@@ -19,6 +19,24 @@ module ApplicationHelper
 	    link_to 'Log in', new_user_session_path, :class=>"login"
 	  end    
   end
+ 
+  #
+  # Render a login or logout link
+  # 
+  def log_in_or_log_out_link
+    if current_user
+        link_to "Logout", user_session_path, :method => :delete
+    else
+        link_to 'Log in', new_user_session_path, :class=>"login"
+    end    
+  end
+  
+  def link_to_if_authenticated(name, options = {}, html_options = nil)
+    if current_user
+      link_to(name, options = {}, html_options = nil)      
+    end
+  end
+
   
   #
   # Renders the flash messages stored in the :notice and :error keys. This 

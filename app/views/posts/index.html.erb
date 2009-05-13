@@ -3,7 +3,7 @@
 		<%= render :partial => "post", :object => post  %>
 	<% end %>
 	<%= will_paginate @posts %>
-	<% if current_user %>
-	  <%= link_to "New Post", new_post_path %>
-	<% end %>	
+	
+	<%= link_to_if_authenticated "New Post", new_post_path %>
+
 </div>

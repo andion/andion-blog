@@ -11,10 +11,21 @@
 	</head>
 	<body>
 
-	
-	<div class="blog_title">	
-		<%= back_to_index_link %>
+	<div id="header">
+	<div class="blog_title">
+	    <span class="links">
+	        <% if current_user %>
+	            <%= link_to "New Post", new_post_path %>
+	            |	            
+	        <% end %>
+	        <%= log_in_or_log_out_link %>
+	        |
+	        <%= link_to 'source on github',
+	            'http://github.com/andion/andion-blog/tree/master' %>
+	    </span>
+		
 		<%= image_tag "titulo_blog2.png" %>
+	</div>
 	</div>
 	
 	<%= render_flash %>
@@ -23,11 +34,7 @@
 
 	<%= back_to_index_link %>
 	
-	<% if current_user %>
-	  <%= link_to "Logout", user_session_path, :method => :delete %>
-	<% else %>
-  	  <%= log_in_link %>	
-	<% end %>
+    <%= log_in_or_log_out_link %>
 	<p class="copyright"> <span style="font-size:1.5em;color:#333">&fnof;</span> Lucas Andión <%= Time.current.year %> </p>
 	</body>
 	</html>

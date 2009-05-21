@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
     :member => { :add_comment => :post }  
 
   # Kept only to have 'root page detection'
-  map.root :controller => "posts"
+  map.root :controller => "life", :action => 'show'
   map.blog '/blog', :controller => "posts"
   
   # Authlogic Session

@@ -1,0 +1,8 @@
+<p class="tiwt">
+        <strong class="from_user"> 
+          <%= link_to "@#{twit.from_user}", "http://twitter.com/#{twit.from_user}" %>
+        </strong> <%= twit.text %>
+        <span class="created_at">
+            <%= Time.parse(twit.created_at).strftime("%d/%B/%y %H:%M") %>
+        </span>
+</p>

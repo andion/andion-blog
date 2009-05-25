@@ -11,7 +11,9 @@
 	<%= link_to h(post.title), post, :class=>"title" %>
 
 	<span class = "content">
-		<%= auto_link simple_format post.content %>
+		<%= auto_link(simple_format post.content) do |text|
+		        truncate(text,45)
+		    end %>
 	</span>
 
     <span class = "post_actions">

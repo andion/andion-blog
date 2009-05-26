@@ -6,7 +6,7 @@
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	  <title>Andion's Blog</title>
 	  <%= stylesheet_link_tag 'scaffold' %>
-	  <%= auto_discovery_link_tag(:rss,formatted_posts_url(:rss), 
+	  <%= auto_discovery_link_tag(:rss, posts_url(:format => 'rss'), 
 	      :title => "Latest Andion's blog posts" ) %>
 	</head>
 	<body>

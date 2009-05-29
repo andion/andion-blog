@@ -34,7 +34,7 @@ Rails::Initializer.run do |config|
     :version => '2.1.2'
 
   config.gem 'twitter',
-    :version => '0.6.11'
+    :version => '0.6.6'
 
 
 end

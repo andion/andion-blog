@@ -8,15 +8,16 @@ class LifeController < ApplicationController
     def show
         twitts = []
         my_twitts = []
-        
-        Twitter::Search.new('bugyou').each do |r| 
-            twitts << r
+
+        Twitter::Search.new.from('bugyou').each do |t|
+          my_twitts << t
+        end
+
+        Twitter::Search.new('bugyou').each do |t|
+            twitts << t unless my_twitts.include? t
         end
         
-        Twitter::Search.new.from('bugyou').each do |r| 
-            my_twitts << r
-        end
-        @twitts = (twitts - my_twitts)[0..2]
+        @twitts =  twitts [0..2]
         @my_twitts = my_twitts[0..2]
     end
 

@@ -342,5 +342,6 @@ div.gist {
 
 .twit {
     font-size:0.3em;
+    overflow:hidden;
 }
 

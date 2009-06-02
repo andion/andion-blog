@@ -1,7 +1,7 @@
-body { 
-  background-color: #FEFEFE; 
-  color: #333; 
-  margin: 0 0 -20px  
+body {
+  background-color: #FEFEFE;
+  color: #333;
+  margin: 0 0 -20px
 }
 
 .footer {
@@ -67,9 +67,12 @@ body, p, ol, ul, td {
 }
 
 pre {
-	background-color: #eee;
-	padding: 10px;
-	font-size: 11px;
+    background-color:#EEEEEE;
+    border:1px solid #333333;
+    font-family:monospace;
+    font-size:12px;
+    margin:0px 50px;
+    padding:10px;
 }
 
 a { color: #000; }
@@ -88,7 +91,7 @@ a:hover { color: #fff; background-color:#000; }
 .flash.notice {
 	background-color:lightGreen;
 	color:green;
-}	
+}
 
 .fieldWithErrors {
   padding: 2px;
@@ -179,7 +182,7 @@ float:right;
 .post span.content  {
 }
 
-.post span.content p {	
+.post span.content p {
 	margin-left:1em;
 }
 
@@ -218,7 +221,7 @@ br.post_separation {
 	text-align:right;
 	height:2.6em;
 	background:#333 url("/images/header_comments.png");
-	border-top:1px solid black;	
+	border-top:1px solid black;
 	display:block;
 	margin-top:-2em;
 	margin-left:-8px;
@@ -244,7 +247,7 @@ br.post_separation {
 
 .pagination {
   text-align: center;
-  padding: .3em; 
+  padding: .3em;
   font-size:0.8em;
 }
   .pagination a, .flickr_pagination span {
@@ -333,5 +336,4 @@ div.gist {
 .twit {
     font-size:0.3em;
 }
-
 

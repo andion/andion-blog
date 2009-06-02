@@ -21,7 +21,7 @@ Rails::Initializer.run do |config|
     :version => '0.2.2',
     :lib => 'utility_scopes',
     :source => 'http://gems.github.com'
-    
+
   config.gem "authlogic",
     :version => '1.3.9'
 
@@ -30,7 +30,12 @@ Rails::Initializer.run do |config|
     :lib => 'will_paginate',
     :source => 'http://gems.github.com'
 
-  config.gem 'paperclip', 
+  config.gem 'paperclip',
     :version => '2.1.2'
 
+  config.gem 'twitter',
+    :version => '0.6.11'
+
+
 end
+

@@ -3,6 +3,10 @@
 Just a personal blog to learn rails
 
 ==Features so far:
+
+* 05/2009 - Added life info in root path
+* 03/2009 - Added comments
+* 02/2009 - Post styling 
 * 12/1/2009 - Basic scaffold of Posts
 * 12/1/2009 - Added comment support
 * 14/1/2009 - Added RSS support for posts

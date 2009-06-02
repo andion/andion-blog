@@ -1,8 +1,14 @@
+<% from = false if from.nil? %>
 <p class="tiwt">
-        <strong class="from_user"> 
-          <%= link_to "@#{twit.from_user}", "http://twitter.com/#{twit.from_user}" %>
+        <strong class="from_user">
+          <% if from %>
+            <%= link_to "@#{twit.from_user}", "http://twitter.com/#{twit.from_user}/status/#{twit.id}" %>
+          <% else %>
+            <%= link_to "@#{twit.from_user}", "http://twitter.com/#{twit.from_user}" %>
+          <% end %>
         </strong> <%= twit.text %>
         <span class="created_at">
-            <%= Time.parse(twit.created_at).strftime("%d/%B/%y %H:%M") %>
+            <%= (Time.parse(twit.created_at)).strftime("%d/%B/%y") %>
         </span>
 </p>
+

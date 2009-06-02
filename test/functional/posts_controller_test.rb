@@ -15,15 +15,16 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   def test_should_create_post
-    assert_difference('Post.count')
-      post :create, :post => @one 
+    assert_difference('Post.count') do
+      post :create, :post => {:title => @normal_post.title, :content => @normal_post.content}
     end
-
-    assert_redirected_to post_path(assigns(:post))
+    puts ">>>>>>>>>>>>>>>>>>> #{assigns(:post).id} ###"
+    assert_equal @normal_post, assigns(:post)
+    assert_redirected_to post_path(assigns(:post).id)
   end
 
   def test_should_show_post
-    get :show, :id => @one.id
+    get :show, :id => @normal_post.id
     assert_response :success
   end
 

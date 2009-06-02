@@ -214,6 +214,13 @@ br.post_separation {
 	margin-bottom:20px;
 }
 
+/* POSTS forms */
+
+.new_post textarea, .edit_post textarea {
+    font-size: 0.8em;
+    width: 60%;
+}
+
 /* Comments */
 /* TODO: style comment view */
 
@@ -241,7 +248,7 @@ br.post_separation {
 	font-size:0.8em;
 }
 
-#comments_block input, textarea {font-size:0.8em;font-family:century gothic;}
+#comments_block input, #comments_block textarea {font-size:0.8em;font-family:century gothic;}
 
 /* PAGINATION */
 

@@ -12,7 +12,8 @@
 
 
 # +post+ whould be a valid post with all his data filled
-post:
+normal_post:
+  id: 1
   title: Titulo del post
   content: Este es un post generico a fecha de hoy
   

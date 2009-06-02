@@ -8,7 +8,7 @@ class PostTest < ActiveSupport::TestCase
   #
   def test_validates_presence_of    
     assert_not_valid(Post.new)
-    assert_valid(@post)
+    assert @normal_post.valid?
   end
   
   #
@@ -23,7 +23,7 @@ class PostTest < ActiveSupport::TestCase
   #
   def test_add_post
     c = Post.count
-    Post.create(:title => @post.title, :content => @post.content)
+    Post.create(:title => @normal_post.title, :content => @normal_post.content)
     assert_equal(c + 1, Post.count)
   end
   
@@ -31,9 +31,9 @@ class PostTest < ActiveSupport::TestCase
   # Test if we can add a comment to a post
   #
    def test_add_comment_to_post
-     nc = @post.number_of_comments
-     @post.comments << @comment
-     assert_equal(nc + 1, @post.number_of_comments)
+     nc = @normal_post.number_of_comments
+     @normal_post.comments << @comment
+     assert_equal(nc + 1, @normal_post.number_of_comments)
    end
   
   #

@@ -298,6 +298,7 @@ body.presentation a {
 
 body.presentation a.linkedin {
     color:#56b;
+    border-bottom:1px dashed;    
 }
 
 body.presentation a:hover {

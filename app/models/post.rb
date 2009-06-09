@@ -59,7 +59,7 @@ class Post < ActiveRecord::Base
         month = current.months_ago(t)
         posts_data    << Post.in_one_month(month).count
         comments_data << Comment.in_one_month(month).count
-        labels_data[t] = month.strftime('%B')
+        labels_data[(number_of_months - t)] = month.strftime('%B')
     end
 
     g.data("Posts", posts_data)

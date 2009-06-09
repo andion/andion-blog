@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  
+
   before_filter :require_user, :only => [:new,:edit]
-  
+
   # GET /posts
   def index
     @posts = Post.ordered.paginate :page => params[:page]
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
       if @post.save
         flash[:notice] = 'Post was successfully created.'
-        redirect_to(@post)       
+        redirect_to(@post)
       else
         render :action => "new"
       end
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def add_comment
     @post = Post.find(params[:id])
     @comment = Comment.new(params[:comment])
@@ -58,5 +58,10 @@ class PostsController < ApplicationController
       render :action => 'show'
     end
   end
-  
+
+  def posts_and_comments_graph
+    send_data(Post.posts_and_comments_per_month_graph, :disposition => 'inline', :type => 'image/png')
+  end
+
 end
+

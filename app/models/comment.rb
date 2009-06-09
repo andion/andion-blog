@@ -14,16 +14,21 @@
 class Comment < ActiveRecord::Base
   belongs_to :post
   before_save :nullify_blanks
-  
+
+  named_scope :in_one_month, lambda { |date|
+    {:conditions =>
+      {:created_at => date.at_beginning_of_month..date.at_end_of_month}
+  }}
+
   validates_presence_of :content
-  
+
   validates_each :author, :content, :allow_blank => true, :allow_nil => true do |record, attr, value|
     blames = Comment.blame_words_regexp
     if value =~ blames
       record.errors.add(attr,
-        "contains a blame. Please calm down, relax, and come again later.") 
+        "contains a blame. Please calm down, relax, and come again later.")
     end
-  end  
+  end
 
   # Modifying utility scopes default ordering
   ordered_by 'created_at ASC'
@@ -34,16 +39,16 @@ class Comment < ActiveRecord::Base
   def author_name
     self.author ? "#{self.author}" : 'Anonymous'
   end
-  
+
   protected
-  
+
   #
   # Returns a regular expression of words you don't allow in posts
   #
   def self.blame_words_regexp
     Regexp.new('fuck|ass|shit|silly|moron|puta|cabrón|gilipollas|mamón|imbécil')
   end
-  
+
   #
   # Ensure thath we have nil and not empty strings in BBDD
   # TODO: why is not necessary
@@ -51,5 +56,6 @@ class Comment < ActiveRecord::Base
   def nullify_blanks
     self.author = nil if author.blank?
   end
-  
+
 end
+

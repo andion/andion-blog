@@ -8,8 +8,9 @@ class CommentTest < ActiveSupport::TestCase
   #
   def test_validates_presence_of    
     assert_not_valid(Comment.new)
-    assert_not_valid(@blaming_comment)
-    assert_valid(@comment)
+    assert_not_valid(Comment.new( :author => @blaming_comment.author, 
+                                  :content => @blaming_comment.content))
+    assert (@comment.valid?, @comment.errors)
   end
   
   #
@@ -17,7 +18,7 @@ class CommentTest < ActiveSupport::TestCase
   #
   def invalid_comment_with_empty_content
     c = Comment.new(:author => @comment.author)
-    assert_valid(c)
+    assert_not_valid(c)
   end
   
   

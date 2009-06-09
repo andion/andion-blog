@@ -20,17 +20,17 @@
 
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  login: MyString
-  crypted_password: MyString
-  password_salt: MyString
-  persistence_token: MyString
+andion:
+  login: andion
+  crypted_password: nomejodas
+  password_salt: nomejodascomosetesteaesto
+  persistence_token: nomejodas
   login_count: 1
   last_request_at: 2009-01-28 23:44:27
   last_login_at: 2009-01-28 23:44:27
   current_login_at: 2009-01-28 23:44:27
-  last_login_ip: MyString
-  current_login_ip: MyString
+  last_login_ip: 0.0.0.0
+  current_login_ip: 0.0.0.0
 
 two:
   login: MyString

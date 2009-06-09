@@ -6,7 +6,7 @@
           <% else %>
             <%= link_to "@#{twit.from_user}", "http://twitter.com/#{twit.from_user}" %>
           <% end %>
-        </strong> <%= twit.text %>
+        </strong> <%= auto_link twit.text %>
         <span class="created_at">
             <%= (Time.parse(twit.created_at)).strftime("%d/%B/%y") %>
         </span>

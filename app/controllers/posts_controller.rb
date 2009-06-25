@@ -14,7 +14,7 @@ class PostsController < ApplicationController
       format.html {
         @comment = Comment.new
       }
-      format.pdf { render :layout => false }
+#      format.pdf { render :layout => false }
     end
   end
 

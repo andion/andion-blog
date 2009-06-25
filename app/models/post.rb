@@ -47,6 +47,11 @@ class Post < ActiveRecord::Base
     self.content ? true : false
   end
 
+  #
+  # Returns a graph with posts and coments per month using gruff
+  # PARAMETERS: optional +number_of_months+ parameter: number of months backwards
+  #             to draw in the statistic
+  #
   def self.posts_and_comments_per_month_graph(number_of_months = 3)
     require 'gruff'
     g = Gruff::Line.new #Define a New Graph

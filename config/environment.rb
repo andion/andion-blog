@@ -16,6 +16,9 @@ Rails::Initializer.run do |config|
     :secret      => '225125c04a80c4b11b4f2c245b254453b590f939173fc1daff45e56dd2515db3ff68ab5b51be980fcc3bb60e933e8d9cb6195a2557fda274ae4677c7fd56becd'
   }
 
+  # prawbn pdf support
+  Mime::Type.register "application/pdf", :pdf
+
   # Frozen gems
   config.gem 'yfactorial-utility_scopes',
     :version => '0.2.2',
@@ -35,6 +38,12 @@ Rails::Initializer.run do |config|
 
   config.gem 'twitter',
     :version => '0.6.11'
+
+  config.gem 'gruff',
+    :version => '0.3.4'
+
+  config.gem 'prawn',
+    :version => '0.4.1'
 
 
 end

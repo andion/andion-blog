@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
       :add_comment => :post
       }
 
-  map.graph '/graph', :controller => "posts", :action => "posts_and_comments_graph"
+  map.graph '/graph', :controller => "life", :action => "posts_and_comments_graph"
 
   # Kept only to have 'root page detection'
   map.root :controller => "life", :action => 'show'

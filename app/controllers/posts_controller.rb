@@ -10,7 +10,12 @@ class PostsController < ApplicationController
   # GET /posts/1
   def show
     @post = Post.find(params[:id])
-    @comment = Comment.new
+    respond_to do |format|
+      format.html {
+        @comment = Comment.new
+      }
+      format.pdf { render :layout => false }
+    end
   end
 
   # GET /posts/new
@@ -57,10 +62,6 @@ class PostsController < ApplicationController
       #TODO: do this redirect to the same page & show errors
       render :action => 'show'
     end
-  end
-
-  def posts_and_comments_graph
-    send_data(Post.posts_and_comments_per_month_graph, :disposition => 'inline', :type => 'image/png')
   end
 
 end

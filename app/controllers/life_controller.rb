@@ -23,7 +23,7 @@ class LifeController < ApplicationController
       @my_twitts = my_twitts[0..2]
     rescue Exception => e
       @no_tweets = true
-      e.inspect
+      puts e.inspect
     end
 
   end

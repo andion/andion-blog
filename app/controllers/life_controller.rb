@@ -15,7 +15,7 @@ class LifeController < ApplicationController
         my_twitts << t
       end
 
-      Twitter::Search.new('bugyou').each do |t|
+      Twitter::Search.new('@bugyou').each do |t|
         twitts << t unless my_twitts.include? t
       end
 

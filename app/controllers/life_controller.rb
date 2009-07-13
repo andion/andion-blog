@@ -25,7 +25,7 @@ class LifeController < ApplicationController
       @no_tweets = true
       p $!  
       puts $@
-
+    end
   end
 
   #

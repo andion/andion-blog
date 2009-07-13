@@ -21,9 +21,9 @@ class LifeController < ApplicationController
 
       @twitts =  twitts[0..2]
       @my_twitts = my_twitts[0..2]
-    rescue Exception => e
+    rescue
       @no_tweets = true
-      puts e.inspect
+      puts $!.inspect, $@  
     end
 
   end

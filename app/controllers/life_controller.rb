@@ -23,8 +23,8 @@ class LifeController < ApplicationController
       @my_twitts = my_twitts[0..2]
     rescue
       @no_tweets = true
-      puts $!.inspect, $@  
-    end
+      p $!  
+      puts $@
 
   end
 

@@ -44,7 +44,25 @@ Rails::Initializer.run do |config|
 
 #  config.gem 'prawn',
 #    :version => '0.4.1'
-
-
 end
+
+module Twitter
+  class Search
+    def fetch(force=false)
+      if @fetch.nil? || force
+        query = @query.dup
+
+        query[:q] = query[:q].join(' ')
+        query[:format] = 'json' #This line is the hack and whole reason we're monkey-patching at all.
+
+        response = self.class.get('http://search.twitter.com/search', :query => query, :format => :json)
+
+        @fetch = Mash.new(response)
+      end
+
+      @fetch
+    end
+  end
+end
+
 

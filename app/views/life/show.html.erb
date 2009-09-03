@@ -1,3 +1,4 @@
+<% unless @no_tweets %>
 <div class="footer">
 <div class="twitts">
 
@@ -6,6 +7,7 @@
     <%= render :partial => 'twit', :collection => @my_twitts %>
 
 </div>
+
 
 <div class="twitts">
 
@@ -17,4 +19,5 @@
 
 </div>
 </div>
+<% end %>
 

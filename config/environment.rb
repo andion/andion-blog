@@ -16,8 +16,8 @@ Rails::Initializer.run do |config|
     :secret      => '225125c04a80c4b11b4f2c245b254453b590f939173fc1daff45e56dd2515db3ff68ab5b51be980fcc3bb60e933e8d9cb6195a2557fda274ae4677c7fd56becd'
   }
 
-  # prawbn pdf support
-  Mime::Type.register "application/pdf", :pdf
+  # prawn pdf support
+  #Mime::Type.register "application/pdf", :pdf
 
   # Frozen gems
   config.gem 'yfactorial-utility_scopes',
@@ -42,9 +42,27 @@ Rails::Initializer.run do |config|
   config.gem 'gruff',
     :version => '0.3.4'
 
-  config.gem 'prawn',
-    :version => '0.4.1'
-
-
+#  config.gem 'prawn',
+#    :version => '0.4.1'
 end
+
+module Twitter
+  class Search
+    def fetch(force=false)
+      if @fetch.nil? || force
+        query = @query.dup
+
+        query[:q] = query[:q].join(' ')
+        query[:format] = 'json' #This line is the hack and whole reason we're monkey-patching at all.
+
+        response = self.class.get('http://search.twitter.com/search', :query => query, :format => :json)
+
+        @fetch = Mash.new(response)
+      end
+
+      @fetch
+    end
+  end
+end
+
 

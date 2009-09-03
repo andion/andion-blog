@@ -2,32 +2,30 @@ class LifeController < ApplicationController
 
   require 'rubygems'
   require 'twitter'
-    
+
   layout 'life'
 
   def show
     twitts = []
     my_twitts = []
+    
+    begin
 
-    Twitter::Search.new.from('bugyou').each do |t|
-      my_twitts << t
-    end
+      Twitter::Search.new.from('bugyou').each do |t|
+        my_twitts << t
+      end
 
-<<<<<<< HEAD:app/controllers/life_controller.rb
-        Twitter::Search.new('bugyou').each do |t|
-            twitts << t unless my_twitts.include? t || t.from_user == 'ooemiso'
-        end
-        
-        @twitts =  twitts [0..2]
-        @my_twitts = my_twitts[0..2]
-=======
-    Twitter::Search.new('bugyou').each do |t|
-      twitts << t unless my_twitts.include? t
->>>>>>> 10d9b61e816253fc332cd763a996363dee0bb1ef:app/controllers/life_controller.rb
+      Twitter::Search.new('@bugyou').each do |t|
+        twitts << t unless my_twitts.include? t || t.from_user == 'ooemiso'
+      end
+
+      @twitts =  twitts[0..2]
+      @my_twitts = my_twitts[0..2]
+    rescue
+      @no_tweets = true
+      p $!  
+      puts $@
     end
-        
-    @twitts =  twitts [0..2]
-    @my_twitts = my_twitts[0..2]
   end
 
   #
@@ -40,3 +38,4 @@ class LifeController < ApplicationController
   end
 
 end
+

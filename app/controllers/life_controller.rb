@@ -8,7 +8,7 @@ class LifeController < ApplicationController
   def show
     twitts = []
     my_twitts = []
-    
+
     begin
 
       Twitter::Search.new.from('bugyou').each do |t|
@@ -16,14 +16,16 @@ class LifeController < ApplicationController
       end
 
       Twitter::Search.new('@bugyou').each do |t|
-        twitts << t unless my_twitts.include? t || t.from_user == 'ooemiso'
+        unless (my_twitts.include? t) || (t.from_user =~ /ooemiso/)
+          twitts << t
+        end
       end
 
       @twitts =  twitts[0..2]
       @my_twitts = my_twitts[0..2]
     rescue
       @no_tweets = true
-      p $!  
+      p $!
       puts $@
     end
   end
